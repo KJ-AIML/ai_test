@@ -4,11 +4,11 @@ An intelligent AI assistant that leverages Large Language Models (LLMs) and agen
 
 ## 📋 Overview
 
-This project implements a production-ready AI assistant system capable of:
-- **Internal Q&A**: Search and retrieve information from internal documents
-- **Issue Summarization**: Analyze and summarize reported issues with severity and affected components
-- **Intelligent Routing**: Use LLM-powered decision-making to route queries to appropriate tools
-- **Modular Architecture**: Clean, scalable design with containerized deployment
+This project implements an AI assistant system capable of:
+- Internal Q&A: Search and retrieve information from internal documents
+- Issue Summarization: Analyze and summarize reported issues with severity and affected components
+- Intelligent Routing: Use LLM-powered decision-making to route queries to appropriate tools
+- Modular Architecture: Clean, scalable design with containerized deployment
 
 ## 🎯 Features
 
@@ -95,9 +95,11 @@ QDRANT_URL=your_qdrant_url
 QDRANT_API_KEY=your_qdrant_key
 ```
 
-4. Install dependencies and run:
+#### Start with Docker Compose (recommended)
+Use the provided docker-compose.dev.yaml to bootstrap services (API, and any linked services you configure such as qdrant/redis if included):
+
 ```bash
-./run.sh
+docker compose -f docker-compose.dev.yaml up --build
 ```
 
 #### Docker Deployment
@@ -270,4 +272,3 @@ This is an internal project for job evaluation purposes.
 - Verify API key is correct and has sufficient quota
 - Check rate limiting
 - Review API usage at https://platform.openai.com/usage
-```
